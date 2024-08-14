@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/perfilprincipal.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:@400;700&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+
+</head>
+<body>
+    <header>
+        <div class="cabezera">
+            <img class="logo_alura" src="img/Logo.png" alt="Logo de Alura">
+        </div>
+    </header>
+    <main>
+        <div class="contenido">
+            <div class="contenido-izquierda">
+                <textarea cols="10" rows="15" id="ingresoTexto" class="ingreso-texto" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="contenido-izquierda-abajo">
+                    <img src="img/icimport.png" alt="Imagen importante">
+                    <p class="advertencia">Solo letras minúsculas y sin acentos</p>
+                    <div class="botones-izquierda">
+                        <button onclick="encriptar();" class="btn-encriptar">Encriptar</button>
+                        <button onclick="desencriptar();"  class="btn-desencriptar">Desencriptar</button>
+                    </div>
+                </div>   
+            </div>
+            <div id="ajusteContenido" class="contenido-derecha">
+                <img id="imgDer" class="imgprincipal" src="img/muresultado.png" alt="Imagen del muñeco">
+                <p id="mensajeAdv" class="mensaje">Ningún mensaje fue encontrado</p>
+                <textarea cols="10" rows="10" id="txtInfo" class="texto-info" readonly>Ingresa el texto que desees encriptar o desencriptar</textarea>
+                <div id="mensajeCopiado" class="mensaje-copiado oculto">¡Texto copiado éxitosamente!</div>
+                <button onclick="copiar();" id="botonCopiar" class="btn-copiar oculto">Copiar</button>
+            </div>
+        </div>
+    </main>
+ 
+
+    <script src="funcion.js"></script>
+</body>
+</html>

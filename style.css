@@ -1,0 +1,233 @@
+/* Define variables CSS para los colores usados en el diseño */
+:root {
+    --color-blue: #0A3871; /* Color azul principal */
+    --color-gray: #D8DFE8; /* Color gris claro */
+    --color-body: #F3F5FC; /* Color de fondo del cuerpo */
+    --color-footer: #AAB2D5; /* Color del pie de página */
+}
+
+/* Estilo general para el elemento body */
+body {
+    background: var(--color-body); /* Establece el color de fondo usando la variable */
+    font-family: "Inter", sans-serif; /* Define la fuente del texto */
+}
+
+/* Estilo para la cabecera */
+.cabezera {
+    width: 90%; /* Ancho del 90% del contenedor padre */
+    margin: auto; /* Centra horizontalmente */
+}
+
+/* Estilo para el logo en la cabecera */
+.logo_alura {
+    margin-top: 40px; /* Añade un margen superior de 40px */
+}
+
+/* Estilo para el contenedor principal */
+.contenido {
+    width: 80.5%; /* Ancho del 80.5% del contenedor padre */
+    margin: auto 40px auto auto; /* Centra horizontalmente con márgenes laterales de 40px */
+    display: grid; /* Utiliza un diseño de cuadrícula (grid) */
+    grid-template-columns: 65% 35%; /* Define dos columnas, 65% y 35% */
+    min-height: calc(100vh - 91px - 72px); /* Altura mínima del viewport menos 91px y 72px */
+    align-items: end; /* Alinea los elementos al final del contenedor */
+}
+
+/* Estilo para la sección izquierda del contenido */
+.contenido-izquierda {
+    height: 90%; /* Altura del 90% del contenedor padre */
+    width: calc(100% - 80px); /* Ancho del 100% del contenedor padre menos 80px */
+    display: flex; /* Utiliza un diseño flexbox */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+/* Estilo para el área de texto de ingreso */
+.ingreso-texto {
+    font-family: "Inter", sans-serif; /* Define la fuente del texto */
+    width: 80%; /* Ancho del 80% del contenedor padre */
+    font-size: 32px; /* Tamaño de la fuente en 32px */
+    color: var(--color-blue); /* Color del texto usando la variable */
+    background: none; /* Elimina el color de fondo */
+    resize: none; /* Desactiva la opción de redimensionar */
+    border: none; /* Elimina el borde */
+    outline: none; /* Elimina el contorno cuando está enfocado */
+}
+
+/* Estilo para el marcador de posición del área de texto */
+.ingreso-texto::placeholder {
+    color: var(--color-blue); /* Color del texto del marcador de posición usando la variable */
+}
+
+/* Estilo para la sección inferior de la izquierda del contenido */
+.contenido-izquierda-abajo {
+    padding-bottom: 32px; /* Añade un relleno inferior de 32px */
+}
+
+/* Estilo para los mensajes de advertencia */
+.advertencia {
+    display: inline-block; /* Hace que el elemento se comporte como un bloque en línea */
+    color: #495057; /* Color del texto */
+    font-size: 12px; /* Tamaño de la fuente en 12px */
+}
+
+/* Estilo para los botones en la sección izquierda */
+.botones-izquierda {
+    display: flex; /* Utiliza un diseño flexbox */
+    gap: 24px; /* Espacio de 24px entre los botones */
+    margin-top: 16px; /* Añade un margen superior de 16px */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan si no caben en una línea */
+}
+
+/* Estilo para el estado de hover de los botones */
+button:hover {
+    transform: translate(0, -2px); /* Mueve el botón 2px hacia arriba */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Añade una sombra al botón */
+}
+
+/* Estilo común para los botones de encriptar, desencriptar y copiar */
+.btn-encriptar, .btn-desencriptar, .btn-copiar {
+    max-width: 328px; /* Ancho máximo de 328px */
+    width: 45%; /* Ancho del 45% del contenedor padre */
+    height: 67px; /* Altura de 67px */
+    font-size: 16px; /* Tamaño de la fuente en 16px */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    border: 1px solid var(--color-blue); /* Borde sólido de 1px con el color `--color-blue` */
+    border-radius: 24px; /* Redondea las esquinas con un radio de 24px */
+}
+
+/* Estilo específico para el botón de encriptar */
+.btn-encriptar {
+    background-color: var(--color-blue); /* Color de fondo usando la variable */
+    color: #FFFFFF; /* Color del texto en blanco */
+}
+
+/* Estilo específico para el botón de desencriptar */
+.btn-desencriptar {
+    background-color: var(--color-gray); /* Color de fondo usando la variable `--color-gray` */
+    color: var(--color-blue); /* Color del texto usando la variable `--color-blue` */
+}
+
+/* Estilo para la sección derecha del contenido */
+.contenido-derecha {
+    overflow: auto; /* Permite el desplazamiento si el contenido excede el contenedor */
+    background-color: #FFFFFF; /* Color de fondo en blanco */
+    height: calc(100% + 48px); /* Altura del 100% del contenedor padre más 48px */
+    border-radius: 32px; /* Redondea las esquinas con un radio de 32px */
+    padding: 32px; /* Añade un relleno de 32px */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total del contenedor */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); /* Añade una sombra al contenedor */
+    display: flex; /* Utiliza un diseño flexbox */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 16px; /* Espacio de 16px entre los elementos */
+}
+
+/* Ajusta el contenido de la sección derecha cuando se aplica la clase `.ajustarContenido` */
+.contenido-derecha.ajustarContenido {
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+/* Estilo para la imagen del muñeco */
+.imgprincipal {
+    width: 100%; /* Ancho del 100% del contenedor padre */
+}
+
+/* Estilo para los mensajes en la sección derecha */
+.mensaje {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-weight: bold; /* Establece el texto en negrita */
+    font-size: 24px; /* Tamaño de la fuente en 24px */
+    color: #343A40; /* Color del texto */
+}
+
+/* Estilo para el texto informativo en la sección derecha */
+.texto-info {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 16px; /* Tamaño de la fuente en 16px */
+    color: #495057; /* Color del texto */
+    background: none; /* Elimina el color de fondo */
+    resize: none; /* Desactiva la opción de redimensionar */
+    border: none; /* Elimina el borde */
+    outline: none; /* Elimina el contorno cuando está enfocado */
+    overflow: auto; /* Permite el desplazamiento si el contenido excede el contenedor */
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total del contenedor */
+}
+
+/* Estilo para el texto informativo en solo lectura */
+.texto-info[readonly] {
+    cursor: auto; /* Cambia el cursor a la flecha por defecto */
+}
+
+/* Ajusta el estilo del texto informativo cuando se aplica la clase `.ajustar` */
+.texto-info.ajustar {
+    height: 90%; /* Altura del 90% del contenedor padre */
+    font-weight: normal; /* Establece el peso de la fuente en normal */
+    font-size: 24px; /* Tamaño de la fuente en 24px */
+}
+
+/* Estilo específico para el botón de copiar */
+.btn-copiar {
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    background: transparent; /* Fondo transparente */
+    color: var(--color-blue); /* Color del texto usando la variable `--color-blue` */
+}
+
+/* Estilo para elementos ocultos */
+.oculto {
+    display: none; /* Oculta el elemento */
+}
+
+
+/* Estilo para pantallas con un ancho máximo de 800px */
+@media screen and (max-width: 800px) {
+    .contenido {
+        width: auto; /* Ancho automático */
+        margin: auto 40px; /* Centra horizontalmente con márgenes laterales de 40px */
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-rows: 75% auto; /* Filas en 75% y auto */
+    }
+
+    .contenido-izquierda {
+        width: auto; /* Ancho automático */
+    }
+
+    .ingreso-texto {
+        width: auto; /* Ancho automático */
+    }
+
+    .botones-izquierda {
+        justify-content: space-around; /* Distribuye el espacio entre los botones */
+    }
+
+    .btn-encriptar, .btn-desencriptar {
+        width: 45%; /* Ancho del 45% del contenedor padre */
+    }
+
+    .contenido-derecha {
+        height: 90%; /* Altura del 90% del contenedor padre */
+        margin-top: 64px; /* Añade un margen superior de 64px */
+    }
+
+    .imgprincipal {
+        display: none; /* Oculta la imagen del muñeco */
+    }
+
+    .textos-derecha {
+        margin: 0; /* Elimina el margen */
+    }
+}
+
+/* Estilo para pantallas con un ancho máximo de 480px */
+@media screen and (max-width: 480px) {
+    .btn-encriptar, .btn-desencriptar {
+        max-width: 100%; /* Ancho máximo del 100% */
+        width: 100%; /* Ancho del 100% del contenedor padre */
+    }
+
+    .textos-derecha {
+        margin: auto; /* Centra el margen horizontalmente */
+    }
+}
